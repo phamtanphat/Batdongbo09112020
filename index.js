@@ -70,10 +70,10 @@ function cong(a , b ) {
     })
 }
 
-cong(5,5)
-.then(value => nhan(value , 'a'))
-.then(tich => console.log(tich))
-.catch(error => console.log(error))
+// cong(5,5)
+// .then(value => nhan(value , 'a'))
+// .then(tich => console.log(tich))
+// .catch(error => console.log(error))
 
 // cong( 5 , 5 , (error , tong) => {
 //     if (error) return console.log(error)
@@ -82,3 +82,17 @@ cong(5,5)
 //         return console.log(Tich)
 //     })
 // })
+function tinh(a , b){
+    return a+ b
+}
+
+async function xuLy(){
+    try {
+        const tong = await cong('a',5);
+        const tich = await nhan(tong , 2);
+    } catch (error) {
+        console.log(error)
+    }
+    
+}
+xuLy()
